@@ -37,7 +37,7 @@ Netlify link:- https://rentomojo-clone.netlify.app
 <img src="https://strong-dodol-f37473.netlify.app/images/wishlistpage.jpg"/>
 
 ### Cart and Checkout page
-<p>On cart page customer can see the order summary and also customer can increase and decrease the quantity of the product. </p>
+<p>On cart page customer can see the order summary and also customer can increase and decrease the quantity of the product.</p>
 <img src="https://strong-dodol-f37473.netlify.app/images/checkoutpage.jpg"/>
 
 ## Tech Stack:
