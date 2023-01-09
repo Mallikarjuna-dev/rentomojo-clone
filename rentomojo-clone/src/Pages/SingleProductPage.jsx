@@ -156,7 +156,7 @@ const SingleProductPage = () => {
                   src={newproduct.productimage}
                 />
                 <Box
-                marginLeft="-60px"
+                  marginLeft="-60px"
                   bg="white"
                   marginTop="20px"
                   width="35px"
@@ -557,30 +557,30 @@ const SingleProductPage = () => {
 
                 {questions
                   ? questions.map((el) => (
-                      <Box
-                        key={el.id}
-                        textAlign="left"
-                        borderBottom="1px solid silver"
-                        width="90%"
-                        margin="auto"
-                        paddingTop="20px"
-                        paddingBottom="20px"
-                        className={styles.pardiv}
-                      >
-                        <Flex justifyContent="space-between">
-                          <Text fontWeight="500">{el.data}</Text>
+                    <Box
+                      key={el.id}
+                      textAlign="left"
+                      borderBottom="1px solid silver"
+                      width="90%"
+                      margin="auto"
+                      paddingTop="20px"
+                      paddingBottom="20px"
+                      className={styles.pardiv}
+                    >
+                      <Flex justifyContent="space-between">
+                        <Text fontWeight="500">{el.data}</Text>
 
-                          <Button
-                            bg="white"
-                            className={styles.delbtn}
-                            display="none"
-                            onClick={() => handledeletequestion(el.id)}
-                          >
-                            Delete
-                          </Button>
-                        </Flex>
-                      </Box>
-                    ))
+                        <Button
+                          bg="white"
+                          className={styles.delbtn}
+                          display="none"
+                          onClick={() => handledeletequestion(el.id)}
+                        >
+                          Delete
+                        </Button>
+                      </Flex>
+                    </Box>
+                  ))
                   : ""}
 
                 <Box padding="40px">

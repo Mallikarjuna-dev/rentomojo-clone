@@ -15,7 +15,7 @@ export const getProducts = (category, params) => (dispatch) => {
   console.log(params);
 
   return axios
-    .get(`https://rento-mojo-masai.herokuapp.com/${category}`, params)
+    .get(`https://rentomojo-server.onrender.com/${category}`, params)
     .then((res) => {
       //console.log(res.data);
       dispatch({ type: GET_PRODUCTS_SUCCESS, payload: res.data });
@@ -30,7 +30,7 @@ export const getsingleproductapi = (productcategory, id) => (dispatch) => {
   dispatch({ type: GET_SINGLEPRODUCT_LOADING });
 
   axios
-    .get(`https://rento-mojo-masai.herokuapp.com/${productcategory}/${id}`)
+    .get(`https://rentomojo-server.onrender.com/${productcategory}/${id}`)
     .then((res) =>
       dispatch({ type: GET_SINGLEPRODUCT_SUCCESS, payload: res.data })
     )

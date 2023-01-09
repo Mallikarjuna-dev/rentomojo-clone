@@ -15,7 +15,7 @@ export const getquestionapi = () => (dispatch) => {
   dispatch({ type: GET_QUESTION_LOADING });
 
   axios
-    .get("https://rento-mojo-masai.herokuapp.com/questions")
+    .get("https://rentomojo-server.onrender.com/questions")
     .then((res) => dispatch({ type: GET_QUESTION_SUCCESS, payload: res.data }))
     .then(() => dispatch({ type: GET_QUESTION_ERROR }));
 };
@@ -24,12 +24,12 @@ export const postquestionapi = (data) => (dispatch) => {
   dispatch({ type: POST_QUESTION_LOADING });
 
   axios
-    .post("https://rento-mojo-masai.herokuapp.com/questions", {
+    .post("https://rentomojo-server.onrender.com/questions", {
       data,
     })
     .then(() => {
       axios
-        .get("https://rento-mojo-masai.herokuapp.com/questions")
+        .get("https://rentomojo-server.onrender.com/questions")
         .then((res) =>
           dispatch({ type: POST_QUESTION_SUCCESS, payload: res.data })
         )
@@ -41,10 +41,10 @@ export const deletequestionapi = (id) => (dispatch) => {
   dispatch({ type: DELETE_QUESTION_LOADING });
 
   axios
-    .delete(`https://rento-mojo-masai.herokuapp.com/questions/${id}`)
+    .delete(`https://rentomojo-server.onrender.com/questions/${id}`)
     .then(() => {
       axios
-        .get("https://rento-mojo-masai.herokuapp.com/questions")
+        .get("https://rentomojo-server.onrender.com/questions")
         .then((res) =>
           dispatch({ type: DELETE_QUESTION_SUCCESS, payload: res.data })
         )
